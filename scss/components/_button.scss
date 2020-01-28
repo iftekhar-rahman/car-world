@@ -1,7 +1,7 @@
 /*=========== Button CSS ==========*/
 
 .boxed-btn {
-    background-color: #DB2D2E;
+    @extend %primary-bg-color;
     padding: 8px 20px;
     font-weight: 600;
     font-size: 17px;
@@ -13,7 +13,7 @@
     text-transform: capitalize;
     &:after {
         @extend %pseudoabsolute;
-        background-color: #323232;
+        background-color: #232628;
         transform: scaleY(0);
         @extend %basetransition;
     }

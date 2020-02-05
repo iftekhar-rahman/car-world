@@ -2,14 +2,21 @@
 // Helper CSS//
 //============//
 
-%borderradius50{
-	border-radius: 50%;
+// border elements
+%borderradius0{
+	border-radius: 0px;
+}
+%borderradius3{
+	border-radius: 3px;
 }
 %borderradius5{
 	border-radius: 5px;
 }
-%borderradius3{
-	border-radius: 3px;
+%borderradius50{
+	border-radius: 50px;
+}
+%borderradiusfiftypercent{
+	border-radius: 50%;
 }
 %borderzero{
 	border: 0;
@@ -23,6 +30,23 @@
 %margin0auto{
 	margin: 0 auto;
 	display: block;
+}
+
+// Display elements
+%displayflex{
+	display: flex;
+}
+%flexdir{
+	flex-direction: column;
+}
+%justifycenter{
+	justify-content: center;
+}
+%justifybetween{
+	justify-content: space-between;
+}
+%alignitemscenter{
+	align-items: center;
 }
 %displayblock{
 	display: block;
@@ -39,6 +63,8 @@
 %dtablecell{
 	display: table-cell;
 }
+
+// Position elements
 %posrelative{
 	position: relative;
 }
@@ -48,10 +74,9 @@
 %posfixed{
 	position: fixed;
 }
-%backgroundimage{
-	background-size: cover;
-	background-position: center;
-	background-color: #ddd;
+%pseudo{
+	position: absolute;
+	content: "";
 }
 %pseudoabsolute{
     position: absolute;
@@ -62,14 +87,16 @@
     content: "";
     z-index: -1;
 }
+
+%backgroundimage{
+	background-size: cover;
+	background-position: center;
+	background-color: #ddd;
+}
 %zindex2{
 	z-index: 2;
 }
-%pseudo{
-	position: absolute;
-	content: "";
-}
-%basetransition{
+%basetransition1{
 	@include transition(all .3s ease);
 }
 %basetransition2{
@@ -119,9 +146,9 @@
 %floarright{
 	float: right;
 }
-%borderradius50{
-	border-radius: 50%;
-}
+// %borderradius50{
+// 	border-radius: 50%;
+// }
 %cursorpointer{
 	cursor: pointer;
 }
@@ -141,7 +168,9 @@
 	text-align: center;
 	display: inline-block;
 }
-
+%fontweight700{
+	font-weight: 700;
+}
 
 %fontAwesome{
 	position: absolute;

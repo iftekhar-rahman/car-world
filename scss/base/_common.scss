@@ -2,12 +2,12 @@
 
 body {
     font-family: $body-font;
-    font-size: $body-font-size;
     color: $body-color;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 15px;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: $heading-font;
 }
 p {
     &:last-child{
@@ -15,10 +15,10 @@ p {
     }
 }
 a, button, img, input, span {
-    @extend %basetransition; 
+    @extend %basetransition1; 
 }
 input[type=text], input[type=email], input[type=password], input[type=tel], input[type=url], textarea {
-    border-radius: 5px;
+    border-radius: 0px;
     height: 50px;
     padding: 8px 20px;
 }
@@ -27,10 +27,10 @@ input[type=text], input[type=email], input[type=password], input[type=tel], inpu
     .form-control{
         &:focus {
             box-shadow: none;
-            border-color: #2a7d2e;
+            @extend %primary-border-color;
         }
         &:hover {
-            border-color: #2a7d2e;
+            @extend %primary-border-color;
         }
     }
 }
@@ -55,19 +55,38 @@ textarea {
     border-color: #ced4da;
     transition: all .3s ease;
     &:focus {
-        border-color: #2a7d2e;
+        @extend %primary-border-color;
     }
     &:hover {
-        border-color: #2a7d2e;
+        @extend %primary-border-color;
     }
 }
-
+.section-padding{
+    padding: 80px 0;
+}
 /*========.section-title=========*/ 
 .section-title {
-    font-size: 38px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #124a2f;
+    h2 {
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+        font-weight: 400;
+        strong{
+            font-weight: 700;
+            color: #BA8B00;
+        }
+        &:after {
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            content: "";
+            width: 100px;
+            height: 2px;
+            background: #BA8B00;
+            margin-left: -50px;
+        }
+    }
 }
 
 /*======.owl-dots customization=======*/
@@ -81,7 +100,7 @@ textarea {
         margin: 0 5px;
         border-radius: 50%;
         &.active {
-            background-color: #0DA0F4;
+            @extend %primary-bg-color;
         }
     }
 }
@@ -90,34 +109,34 @@ textarea {
 .owl-nav div {
     @extend %displayinline;
     @extend %posabsolute;
-    left: -10px;
+    left: 0px;
     top: 50%;
-    color: #2A7D2E;
-    background-color: #fff;
-    line-height: 60px;
+    @extend %white-color;
+    // background-color: #BA8B0090;
+    line-height: 55px;
     margin-top: -30px;
-    width: 60px;
+    width: 50px;
     height: 60px;
-    font-size: 45px;
+    font-size: 55px;
     padding-right: 5px;
-    @extend %borderradius50;
+    // @extend %borderradius50;
     @extend %textcenter;
-    @extend %basetransition;
+    @extend %basetransition1;
     &.owl-next {
         left: auto;
-        right: -10px;
+        right: 0px;
         padding-left: 5px;
         padding-right: 0;
     }
     &:hover {
-        color: #ffffff;
-        background-color: #2A7D2E;
+        @extend %primary-color;
+        // background-color: #BA8B00;
     }
 }
 
 select {
     font-size: 19px;
-    color: #0da0f4;
+    // color: #0da0f4;
     background-color: #fff;
     padding: 8px 10px;
 }
@@ -126,20 +145,21 @@ select {
 .nice-select {
     width: 100%;
     border-radius: 50px;
-    height: 50px;
-    line-height: 50px;
+    height: 42px;
+    line-height: 39px;
     padding-left: 20px;
-    border-color:  #ced4da;
+    border-color: #ced4da;
+    font-size: 15px;
     .list {
         width: 100%;
         box-shadow: none;
         border: 1px solid #ced4da;
     }
     &:focus {
-        border-color: #154D32;
+        @extend %primary-border-color;
     }
     &:hover {
-        border-color: #154D32;
+        @extend %primary-border-color;
     }
     &:after{
         right: 25px;
@@ -149,12 +169,12 @@ select {
         margin-top: -6px;
     }
     &:hover:after {
-        border-color: #2A7D2E;
+        @extend %primary-border-color;
     }
 }
-.ps__scrollbar-y {
-    background-color: #99822c !important;
-}
+// .ps__scrollbar-y {
+//     background-color: #99822c !important;
+// }
 
 
 

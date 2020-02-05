@@ -17,6 +17,9 @@
 %secondary-bg-color{
 	background-color: $secondary-color;
 }
+%secondary-border-color{
+	border-color: $secondary-color;
+}
 %white-color{
 	color: $color-white;
 }
@@ -35,8 +38,15 @@
 %body-color{
 	color: $body-color;
 }
-%light-blue-bg-color{
-	background-color: $light-blue-bg-color;
-}
+// %body-bg{
+// 	background-color: $bg-color;
+// }
 
+
+%lightblue-color{
+	color: #F0F8FF;
+}
+%lightblue-bg-color{
+	background-color: #F0F8FF;
+}
 

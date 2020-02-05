@@ -13,7 +13,9 @@
 
         <!--Plugins-->
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/css/aos.css" rel="stylesheet">
         <link href="assets/css/nice-select.css" rel="stylesheet">
+        <link href="assets/css/jqueryUi.css" rel="stylesheet">
 
         <!--Theme specific styles-->
         <link href="assets/css/style.css" rel="stylesheet">
@@ -32,20 +34,17 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="header-social-icons">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                </ul>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube"></i></a>
+                                <!-- <a href="mailto:iftekharmail1@gmail.com"><i class="fa fa-envelope"></i> iftekharmail1@gmail.com</a> -->
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="header-contact-info">
-                                <ul>
-                                    <li><a href="tel:+8801717907953"><i class="fa fa-phone"></i> +8801717907953</a></li>
-                                    <li><a href="mailto:iftekharmail1@gmail.com"><i class="fa fa-phone"></i> iftekharmail1@gmail.com</a></li>
-                                </ul>
+                            <div class="header-contact-info text-right">
+                                <!-- <a href="tel:+8801717907953"><i class="fa fa-phone"></i> +8801717907953</a> -->
+                                <a href="mailto:iftekharmail1@gmail.com"><i class="fa fa-envelope"></i> iftekharmail1@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -61,11 +60,15 @@
                                     Galaxy of
                                     Car =====
                                  -->
-                                <a href="#"><img src="img/logo.png" alt="Site Logo"></a>
+                                <a href="#">
+                                    <!-- <img src="assets/img/logo2.png" alt="Site Logo"> -->
+                                    <span><i class="fa fa-car"></i> <b class="car">Car</b> World</span>
+                                    <span class="car-text">The Best cars in the world</span>
+                                </a>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="mainmenu">
+                            <div class="mainmenu d-flex align-items-center justify-content-between h-100">
                                 <ul>
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Pages</a></li>
@@ -74,9 +77,10 @@
                                     <li><a href="#">Car Details</a></li>
                                     <li><a href="#">Contact</a></li>
                                 </ul>
-                                <div class="header-search-bar">
-                                    <span><i class="fa fa-search"></i></span>
-                                </div>
+                                <a href="tel:+088626278292" class="header-phone">
+                                    <span class="phone-icon"><i class="fa fa-phone"></i></span>
+                                    <span>Call Us Now<br/> +088626278292</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -86,32 +90,38 @@
         <!-- .site-header ends -->
 
         <!-- .homepage-slider-area starts -->
-        <div class="homepage-slider-area">
-            <div class="homepage-slides">
-                <!-- .single-slider-item starts -->
-                <div class="single-slider-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <h4>Welcome to the most amazing car world</h4>
-                                <h2>Find your dream car on our website that you feel like to buy</h2>
-                                <a href="#" class="boxed-btn">Read more</a>
+        <div class="homepage-slider-area overflow-hidden">
+            <div class="homepage-slides-wrap">
+                <div class="owl-carousel homepage-slides">
+                    <!-- .single-slider-item starts -->
+                    <div class="single-slider-item" style="background-image: url(./assets/img/slide-bg-28.jpg);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 my-auto">
+                                    <div  class="slider-text fade-up">
+                                        <h4>Welcome to the most amazing car world</h4>
+                                        <h2>Find your dream car on our website that you feel like to buy</h2>
+                                        <a href="#" class="boxed-btn">Read more <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- .single-slider-item ends -->
-                <!-- .single-slider-item starts -->
-                <div class="single-slider-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <h4>Welcome to the most amazing car world</h4>
-                                <h2>Find your dream car on our website that you feel like to buy</h2>
-                                <a href="#" class="boxed-btn">Read more</a>
+                    </div><!-- .single-slider-item ends -->
+                    <!-- .single-slider-item starts -->
+                    <div class="single-slider-item" style="background-image: url(./assets/img/slide-bg-27.jpg);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 my-auto">
+                                    <div  class="slider-text fade-up">
+                                        <h4>Welcome to the most amazing car world</h4>
+                                        <h2>Find your dream car on our website that you feel like to buy</h2>
+                                        <a href="#" class="boxed-btn">Read more <i class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- .single-slider-item ends -->
+                    </div><!-- .single-slider-item ends -->
+                </div>
             </div>
         </div>
         <!-- .homepage-slider-area ends -->
@@ -122,11 +132,14 @@
                 <div class="row">
                     <div class="col">
                         <div class="car-search-box">
-                            <h3>Search your desired car</h3>
+                            <div class="section-title text-center">
+                                <h2>Search your <strong>desired car</strong></h2>
+                            </div>
                             <div class="d-flex">
-                                <div class="car-search-left">
+                                <div class="car-search-left d-flex flex-wrap">
                                     <!-- .single-carsearch-item starts -->
                                     <div class="single-carsearch-item">
+                                        <label for="make">Select Make</label>
                                         <select name="make" id="make">
                                             <option value="Make">Any Make</option>
                                             <option value="BMW">BMW</option>
@@ -137,6 +150,7 @@
                                     </div><!-- .single-carsearch-item ends -->
                                     <!-- .single-carsearch-item starts -->
                                     <div class="single-carsearch-item">
+                                        <label for="model">Select model</label>
                                         <select name="model" id="model">
                                             <option value="Make">Any Model</option>
                                             <option value="BMW">Audi</option>
@@ -148,6 +162,7 @@
                                     </div><!-- .single-carsearch-item ends -->
                                     <!-- .single-carsearch-item starts -->
                                     <div class="single-carsearch-item">
+                                        <label for="cartype">Select type</label>
                                         <select name="cartype" id="cartype">
                                             <option value="Type of Car">Type of Car</option>
                                             <option value="New Car">New Car</option>
@@ -156,6 +171,7 @@
                                     </div><!-- .single-carsearch-item ends -->
                                     <!-- .single-carsearch-item starts -->
                                     <div class="single-carsearch-item">
+                                        <label for="minyear">Select min year</label>
                                         <select name="minyear" id="minyear">
                                             <option value="Min Year">Min Year</option>
                                             <option value="1990">1990</option>
@@ -168,6 +184,7 @@
                                     </div><!-- .single-carsearch-item ends -->
                                     <!-- .single-carsearch-item starts -->
                                     <div class="single-carsearch-item">
+                                        <label for="maxyear">Select max year</label>
                                         <select name="maxyear" id="maxyear">
                                             <option value="Max Year">Max Year</option>
                                             <option value="2020">2020</option>
@@ -180,6 +197,7 @@
                                     </div><!-- .single-carsearch-item ends -->
                                     <!-- .single-carsearch-item starts -->
                                     <div class="single-carsearch-item">
+                                        <label for="condition">Select condition</label>
                                         <select name="condition" id="condition">
                                             <option value="Select Condition">Select Condition</option>
                                             <option value="Condition 1">Condition 1</option>
@@ -193,12 +211,22 @@
                                 </div>
                                 <div class="car-search-right">
                                     <!-- .price-range-slider starts -->
-                                    <div class="price-range-slider-1">
-    
+                                    <div class="finance-range-slider-1">
+                                        <div class="range-slider">
+                                            <div class="slider-labels position-relative">
+                                                <span class="min-text">Min</span>
+                                                <span class="max-text">Max</span>
+                                            </div>
+                                            <div id="range-slider-1" class="pm-range-slider"></div>
+                                            <div class="slider-price position-relative">
+                                                <input class="amount1" type="text" readonly>
+                                                <input class="amount2 text-right" type="text" readonly>
+                                            </div>
+                                        </div>
                                     </div><!-- .price-range-slider ends -->
-                                    <div class="car-search-btn">
-                                        <a href="#" class="boxed-btn">Advanced Search</a>
-                                        <a href="#" class="boxed-btn"><i class="fa fa-search"></i> Search</a>
+                                    <div class="car-search-btn text-right">
+                                        <a href="#" class="advance-search">Advanced Search</a>
+                                        <a href="#" class="boxed-btn">Search Vehicle <i class="fa fa-angle-right"></i></a>
                                     </div><!-- .car-search-btn ends -->
                                 </div>
                             </div>
@@ -210,39 +238,60 @@
         <!-- .car-search-area ends -->
 
         <!-- .about-us-area starts -->
-        <div class="about-us-area">
+        <div class="about-us-area section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-5">
                         <div class="about-welcome-text">
-                            <div class="section-title">
-                                <h2>Welcome to the Car World</h2>
+                            <div class="section-title ">
+                                <h2>Welcome to the <strong>Car World</strong></h2>
                             </div>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.</p>
+                            <img src="assets/img/slide-car-1.png" alt="">
                         </div><!-- .about-welcome-text ends -->
                     </div>
-                    <div class="col-lg-6">
-                        <div class="about-content d-flex">
-                            <div class="single-about-content">
-                                <span><i class="fa fa-star"></i></span>
-                                <h3>Best Price</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolore tempore expedita mollitia dolorum quasi dolores est quos laboriosam fugit.</p>
-                            </div><!-- .single-about-content ends -->
-                            <div class="single-about-content">
-                                <span><i class="fa fa-star"></i></span>
-                                <h3>Best Price</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolore tempore expedita mollitia dolorum quasi dolores est quos laboriosam fugit.</p>
-                            </div><!-- .single-about-content ends -->
-                            <div class="single-about-content">
-                                <span><i class="fa fa-star"></i></span>
-                                <h3>Best Price</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolore tempore expedita mollitia dolorum quasi dolores est quos laboriosam fugit.</p>
-                            </div><!-- .single-about-content ends -->
-                            <div class="single-about-content">
-                                <span><i class="fa fa-star"></i></span>
-                                <h3>Best Price</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolore tempore expedita mollitia dolorum quasi dolores est quos laboriosam fugit.</p>
-                            </div><!-- .single-about-content ends -->
+                    <div class="col-lg-7">
+                        <div class="about-content">
+                            <div class="row no-gutters">
+                                <div class="col-lg-6">
+                                    <div class="single-about-content text-center">
+                                        <div class="about-content">
+                                            <span><i class="fa fa-star"></i></span>
+                                            <h3>Best Price</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolore tempore expedita mollitia.</p>
+                                        </div>
+                                    </div><!-- .single-about-content ends -->
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single-about-content text-center">
+                                        <div class="about-content">
+                                            <span><i class="fa fa-star"></i></span>
+                                            <h3>Best Price</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolore tempore expedita mollitia.</p>
+                                        </div>
+                                    </div><!-- .single-about-content ends -->
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single-about-content text-center">
+                                        <div class="about-content">
+                                            <span><i class="fa fa-star"></i></span>
+                                            <h3>Best Price</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolore tempore expedita mollitia.</p>
+                                        </div>
+                                    </div><!-- .single-about-content ends -->
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="single-about-content text-center">
+                                        <div class="about-content">
+                                            <span><i class="fa fa-star"></i></span>
+                                            <h3>Best Price</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolore tempore expedita mollitia.</p>
+                                        </div>
+                                    </div><!-- .single-about-content ends -->
+                                </div>
+                            </div>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -251,7 +300,7 @@
         <!-- .about-us-area ends -->
 
         <!-- .featured-area starts -->
-        <div class="featured-area">
+        <div class="featured-area section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -933,9 +982,11 @@
 
         <!--Plugins-->
         <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/aos.js"></script>
         <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/jqueryUI.js"></script>
 
         <!--Active & Custom JS-->
-        <script src="js/main.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

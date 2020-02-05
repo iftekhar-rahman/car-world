@@ -1,1 +1,336 @@
 /*================Home Page CSS===============*/
+.homepage-slider-area, .single-slider-item .row{
+    height: 750px;
+}
+.homepage-slider-area{
+    .owl-nav div{
+        @extend %white-color;
+        left: -60px;
+        background-color: #BA8B0090;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 35px;
+        line-height: 48px;
+        transition: .7s;
+        &.owl-next {
+            left: auto;
+            right: -60px;
+        }
+        &:hover {
+            // @extend %primary-color;
+            background-color: #BA8B00;
+        }
+    }
+    &:hover{
+        .owl-nav div{
+            left: 2%;
+            &.owl-next{
+                left: auto;
+                right: 2%;
+            }
+        }
+    }
+    // .single-slider-item
+    .single-slider-item {
+        background-size: cover;
+        background-position: center;
+        background-color: #ddd;
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            content: "";
+            z-index: -1;
+            opacity: .4;
+        }
+        .slider-text {
+            // margin-top: -55px;
+            position: relative;
+            z-index: 2;
+            width: 740px;
+            h4{
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 10px;
+                background: #BA8B00;
+                display: inline-block;
+                padding: 4px 10px;
+            }
+            h2{
+                font-size: 40px;
+                margin-bottom: 25px;
+                text-transform: uppercase;
+                line-height: 1.3;
+            }
+        }
+    }
+}
+/* Owl Carousel Content animation */
+.owl-carousel {
+    @extend %displaynone;
+    @extend %posrelative;
+    @extend %w100;
+    z-index: 1;
+    -webkit-tap-highlight-color: transparent;
+}
+.owl-carousel.owl-loaded {
+    @extend %displayblock;
+}
+.owl-carousel .owl-stage {
+    @extend %posrelative;
+    -ms-touch-action: pan-Y;
+    -moz-backface-visibility: hidden;
+}
+.owl-carousel .owl-stage::after {
+    @extend %displayblock;
+    height: 0;
+    clear: both;
+    line-height: 0;
+    content: '.';
+    visibility: hidden;
+}
+.owl-carousel .owl-stage-outer {
+    @extend %posrelative;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;;
+}
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}  
+
+// Fade In Up keyframes
+@-webkit-keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+.homepage-slider-area .owl-item.active .fade-up{
+    animation: fadeInUp 1s 1;
+}
+// .car-search-area
+.car-search-area {
+    .car-search-box {
+        padding: 30px 30px 30px; 
+        margin-top: -50px;
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        border: 1px solid #e3e3e3;
+        .car-search-left {
+            flex-basis: 65%;
+        }
+        .car-search-right {
+            flex-basis: 35%;
+            // .finance-range-slider-1
+            .finance-range-slider-1 {
+                margin-top: 20px;
+                margin-bottom: 35px;
+                width: 340px;
+                float: right;
+            }
+        }
+        .car-search-btn {
+            .boxed-btn {
+                margin-left: 10px;
+            }
+            .advance-search {
+                text-transform: uppercase;
+                font-size: 14px;
+                padding: 10px 0;
+                color: #BA8B00;
+                &:hover {
+                    color: #BF2130;
+                }
+            }
+        }
+        .single-carsearch-item {
+            width: 33.3333%;
+            padding-right: 20px;
+            margin-bottom: 30px;
+            label {
+                font-size: 15px;
+                margin-left: 19px;
+                text-transform: capitalize;
+            }
+            .nice-select {
+                &:focus {
+                    @extend %primary-border-color;
+                }
+                &:hover {
+                    @extend %primary-border-color;
+                }
+                &:hover:after {
+                    @extend %primary-border-color;
+                }
+            }
+        }
+    }
+}
+
+
+// range slider
+.range-slider {
+    padding: 23px 0 0;
+}
+.pm-range-slider {
+    height: 8px;
+    background-color: #e3e3e3;
+    @extend %posrelative;
+    @extend %borderradius5;
+    // &:before {
+    //     height: 19px;
+    //     width: 19px;
+    //     @extend %secondary-bg-color;
+    //     @extend %pseudo;
+    //     @extend %borderradius50;
+    //     top: 50%;
+    //     transform: translate(-100%, -50%);
+    //     left: 9px;
+    // }
+    // &:after {
+    //     height: 19px;
+    //     width: 19px;
+    //     @extend %secondary-bg-color;
+    //     @extend %pseudo;
+    //     @extend %borderradius50;
+    //     top: 50%;
+    //     transform: translate(100%, -50%);
+    //     right: 10px;
+    // }
+    .ui-slider-handle {
+        width: 19px;
+        height: 19px;
+        top: -5px;
+        @extend %primary-bg-color;
+        border-radius: 100%;
+        transition: inherit;
+        &:focus {
+            outline: none;
+            border: none;
+        }
+    }
+    .ui-widget-header {
+        @extend %primary-bg-color;
+        @extend %h100;
+        top: 0;
+    }
+}
+.slider-price {
+    margin-top: 8px;
+    @extend %textcenter;
+    @extend %displayflex;
+    @extend %justifybetween;
+    input{
+        max-width: 50%;
+        background: none;
+        padding: 0;
+        border: 0;
+        height: auto;
+        // @extend %white-color;
+        font-size: 15px;
+        &.max-price{
+            @extend %textright;
+        }
+    }
+}
+.slider-labels{
+    // @extend %white-color;
+    @extend %uppercase;
+    font-size: 15px;
+    span {
+        @extend %posabsolute;
+        left: 5px;
+        top: -28px;
+        &.max-text {
+            left: auto;
+            right: 9px;
+        }
+    }
+}
+
+
+// about-us-area
+.about-us-area{
+
+}
+.single-about-content {
+    padding: 30px 15px;
+    border: 1px solid #e3e3e3;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    /* color: #fff; */
+    transition: .5s;
+    &:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        span{
+            background-color: #BA8B00;
+            color: #fff;
+        }
+    }
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    span {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        line-height: 59px;
+        border: 1px solid #BA8B00;
+        border-radius: 50px;
+        color: #BA8B00;
+        margin-bottom: 20px;
+        font-size: 25px;
+        transition: .5s;
+    }
+}
+.about-content {
+    /* padding-left: 20px; */
+}
+.about-welcome-text img{
+    margin-top: 30px;
+}
+.about-welcome-text{
+    .section-title h2:after {
+        left: 0;
+        margin-left: 0;
+    }
+}
+
+.featured-area{
+background-color: #F0F8FF;
+}

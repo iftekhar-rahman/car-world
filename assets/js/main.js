@@ -2,18 +2,37 @@ jQuery(document).ready(function($){
 
     // $(".header-area").sticky({ topSpacing: 0 });
 
-    // $('select').niceSelect();
+    $('select').niceSelect();
 
     // homepage-slides
-	// $(".homepage-slides").owlCarousel({
-	// 	items: 1,
-	// 	loop: true,
-	// 	nav: true,
-	// 	dots: false,
-    //     autoplay: false,
-    //     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-	// });
+	$(".homepage-slides").owlCarousel({
+		items: 1,
+		loop: true,
+		nav: true,
+		dots: false,
+        autoplay: false,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+	});
 
+    AOS.init();
+
+
+     /*---------- Double handle Range Slider  ----------*/
+     $(function () {
+        $("#range-slider-1").slider({
+            range: true,
+            min: 0,
+            max: 5000,
+            step: 100,
+            values: [1000, 4000],
+            slide: function (event, ui) {
+                $('.amount1').val("£" + ui.values[0]);
+                $('.amount2').val("£" + ui.values[1]);
+            }
+        });
+        $('.amount1').val("£" + $("#range-slider-1").slider("values", 0));
+        $('.amount2').val("£" + $("#range-slider-1").slider("values", 1));
+    });
         // perfectScrollbar
         // $(".nice-select .list").perfectScrollbar();
 

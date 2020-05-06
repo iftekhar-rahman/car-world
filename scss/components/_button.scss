@@ -2,7 +2,7 @@
 
 .boxed-btn {
     background-color: #BA8B00;
-    padding: 8px 12px 9px 22px;
+    padding: 8px 16px 9px 18px;
     font-weight: 600;
     font-size: 17px;
     border: 0;
@@ -11,20 +11,19 @@
     z-index: 2;
     @extend %white-color;
     text-transform: capitalize;
-    border-radius: 50px;
     i{
-        width: 30px;
-        height: 30px;
-        font-size: 20px;
-        line-height: 30px;
+        width: 25px;
+        height: 25px;
+        font-size: 15px;
+        line-height: 25px;
         background-color: #fff;
-        border-radius: 50px;
         text-align: center;
         padding-left: 3px;
         color: #BA8B00;
         font-weight: 900;
         margin-left: 3px;
         transition: .5s;
+        border-radius: 50px;
     }
     &:hover {
         @extend %white-color;

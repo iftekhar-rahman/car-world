@@ -7,7 +7,7 @@
         @extend %white-color;
         left: -60px;
         background-color: #BA8B0090;
-        border-radius: 50%;
+        // border-radius: 50%;
         width: 50px;
         height: 50px;
         font-size: 35px;
@@ -150,6 +150,11 @@
         z-index: 2;
         background: #fff;
         border: 1px solid #e3e3e3;
+        // .section-title{
+        //     h2{
+        //         margin-bottom: 50px;
+        //     }
+        // }
         .car-search-left {
             flex-basis: 65%;
         }
@@ -183,7 +188,7 @@
             margin-bottom: 30px;
             label {
                 font-size: 15px;
-                margin-left: 19px;
+                // margin-left: 19px;
                 text-transform: capitalize;
             }
             .nice-select {
@@ -292,45 +297,161 @@
     border: 1px solid #e3e3e3;
     margin-bottom: 20px;
     margin-left: 20px;
-    /* color: #fff; */
     transition: .5s;
     &:hover {
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-        span{
-            background-color: #BA8B00;
+        .sonar-emitter{
             color: #fff;
+            background-color: #BF2130;
+        }
+        .sonar-wave {
+            animation: sonarWave 1s linear;
+            background-color: #BF2130;
         }
     }
     h3 {
         font-size: 20px;
         margin-bottom: 10px;
     }
-    span {
+    .sonar-emitter {
         width: 60px;
         height: 60px;
         display: inline-block;
         line-height: 59px;
         border: 1px solid #BA8B00;
-        border-radius: 50px;
+        border-radius: 9999px;
         color: #BA8B00;
         margin-bottom: 20px;
         font-size: 25px;
         transition: .5s;
+        .sonar-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 9999px;
+            z-index: -1;
+            pointer-events: none;
+        }
     }
 }
-.about-content {
-    /* padding-left: 20px; */
+@-webkit-keyframes sonarWave {
+    from {
+      opacity: 0.4;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    }
+    to {
+      -webkit-transform: scale(1.7);
+              transform: scale(1.7);
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
 }
+@keyframes sonarWave {
+    from {
+      opacity: 0.4;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    }
+    to {
+      -webkit-transform: scale(1.7);
+              transform: scale(1.7);
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+// .about-content {
+//     padding-left: 20px;
+// }
 .about-welcome-text img{
     margin-top: 30px;
 }
 .about-welcome-text{
-    .section-title h2:after {
-        left: 0;
-        margin-left: 0;
+    .section-title {
+        h2{
+            &:after {
+                left: 0;
+                margin-left: 0;
+            }
+            &:before {
+                left: 0;
+                margin-left: 0;
+            }
+        }
     }
 }
-
+.about-welcome-text {
+    margin-right: -20px;
+}
+// .featured-area
 .featured-area{
 background-color: #F0F8FF;
+}
+
+.single-fetured-item {
+    background: #fff;
+}
+
+.featured-price {
+    padding: 15px 15px;
+}
+
+.featured-price .feature-price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #BF2130;
+}
+
+.stars span {
+    color: #BF2130;
+    font-size: 15px;
+}
+
+.featured-text {
+    padding: 0px 15px 20px;
+}
+
+.featured-text h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.featured-spec span {
+    color: #333;
+    font-size: 14px;
+}
+
+.single-fetured-item .boxed-btn {
+    padding: 7px 8px 8px 17px;
+    font-size: 16px;
+    /* width: 100%; */
+    text-align: center;
+    /* border-radius: 0; */
+}
+
+.featured-car {
+    padding: 15px 15px 0;
+}
+
+.featured-spec {
+    margin-bottom: 20px;
+}
+
+.single-fetured-item .boxed-btn i {
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+}
+
+.featured-area .section-title h2 {
+    margin-bottom: 60px;
+}
+
+.featured-area .section-title p {
+    margin-bottom: 5px;
+}
+
+.show-more-btn {
+    margin-top: 30px;
 }

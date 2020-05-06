@@ -67,24 +67,30 @@ textarea {
 /*========.section-title=========*/ 
 .section-title {
     h2 {
-        text-transform: capitalize;
+        text-transform: uppercase;
         margin-bottom: 40px;
         position: relative;
         display: inline-block;
         font-weight: 400;
+        font-size: 30px;
         strong{
             font-weight: 700;
             color: #BA8B00;
         }
-        &:after {
+        &:after, &:before {
             position: absolute;
             left: 50%;
             bottom: -10px;
             content: "";
             width: 100px;
-            height: 2px;
+            height: 1px;
             background: #BA8B00;
             margin-left: -50px;
+        }
+        &:before {
+            width: 60px;
+            bottom: -16px;
+            margin-left: -30px;
         }
     }
 }
@@ -109,9 +115,9 @@ textarea {
 .owl-nav div {
     @extend %displayinline;
     @extend %posabsolute;
-    left: 0px;
+    left: -75px;
     top: 50%;
-    @extend %white-color;
+    @extend %primary-color;
     // background-color: #BA8B0090;
     line-height: 55px;
     margin-top: -30px;
@@ -122,14 +128,16 @@ textarea {
     // @extend %borderradius50;
     @extend %textcenter;
     @extend %basetransition1;
+    opacity: .6;
     &.owl-next {
         left: auto;
-        right: 0px;
+        right:-75px;
         padding-left: 5px;
         padding-right: 0;
     }
     &:hover {
         @extend %primary-color;
+        opacity: 1;
         // background-color: #BA8B00;
     }
 }
@@ -144,7 +152,7 @@ select {
 /*========.nice-select=============*/ 
 .nice-select {
     width: 100%;
-    border-radius: 50px;
+    border-radius: 0px;
     height: 42px;
     line-height: 39px;
     padding-left: 20px;
